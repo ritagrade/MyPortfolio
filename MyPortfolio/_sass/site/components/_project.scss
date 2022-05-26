@@ -3,11 +3,11 @@
 
 
 .project-wrapper {
-    padding: 3rem;
-  }
+  padding: var(--gutter-small);
+}
   
 .project-title {
-  margin-bottom: 3rem;
+  margin-bottom: var(--gutter-small);
 }
   
 

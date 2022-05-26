@@ -2,7 +2,7 @@
 /*----------------------- Mobile --------------------------*/
 
 .hero {
-    padding-bottom: 8rem;
+    padding-bottom: var(--gutter-xlarge8);
 }
   
 .tagline {
@@ -24,7 +24,7 @@
   
 .sectionportfolio #icon {
   padding: 0.5em;
-  font-size: 4rem;
+  font-size: var(--font-size-large);
   background: var(--color-gradient);
   background-size: 400% 400%;
   animation: gradient 30s ease infinite;
@@ -104,7 +104,7 @@
   }
 
   .tagline {
-    font-size: 3rem;
+    font-size: var(--font-size-xlarge);
   }
 
   .tagline {
@@ -127,12 +127,12 @@
   }
 
   .tagline h2 {
-    font-size: 4rem;
-    padding: 0rem 6rem;
+    font-size: var(--font-size-xxxlarge);
+    padding: 0 var(--gutter-xlarge);
   }
 
   .tagline {
-    font-size: 3rem;
+    font-size: var(--font-size-xlarge);
   }
 
 }

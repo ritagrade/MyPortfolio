@@ -15,45 +15,43 @@
 
   background-color: var(--bg-color-light);
   color: var(--color-light);
-  font-family: 'Lato', sans-serif;
-  font-size: 62.5%;
-  
-  --font-size-root: 16px;
+  --font-family-primary: 'Lato', sans-serif;
+  --font-family-secondary: 'Patua One', cursive;
 
-  --line-height-regular: 1.5;
-  --line-height-tight: 1.3;
-  --line-height-tiny: 1.2;
 
-  --font-size-xsmall: #{rem(12px)};
-  --font-size-small: #{rem(14px)};
-  --font-size-normal: #{rem(16px)};
-  --font-size-large: #{rem(18px)};
-  --font-size-xlarge: #{rem(20px)};
-  --font-size-xxlarge: #{rem(24px)};
-  --font-size-xxlarge-2: #{rem(28px)};
-  --font-size-xxxlarge:#{rem(32px)};
-  --font-size-xxxxlarge: #{rem(40px)};
-  --font-size-xxxxxlarge: #{rem(56px)};
-  --font-size-xxxxxxlarge: #{rem(72px)};
+  --line-height-regular: 3rem;
+  --line-height-tight: 2rem;
+  --line-height-tiny: 1.5rem;
 
-  --font-size-level-jumbo: var(--font-size-xxxxlarge);
-  --font-size-level-1: var(--font-size-xxxxlarge);
-  --font-size-level-2: var(--font-size-xxxlarge);
-  --font-size-level-3: var(--font-size-xxlarge);
-  --font-size-level-4: var(--font-size-large);
-  --font-size-body: var(--font-size-large);
-  --font-size-body-tiny: var(--font-size-xsmall);
-  --font-size-body-small: var(--font-size-normal);
-  --font-size-body-large: var(--font-size-large);
-  --font-size-body-huge: var(--font-size-xxlarge);
+
+
+  --font-size-xsmall: 1rem;
+  --font-size-small: 1.5rem;
+  --font-size-normal: 2rem;
+  --font-size-large: 2.4rem;
+  --font-size-xlarge: 3rem;
+  --font-size-xxlarge: 3.2rem;
+  --font-size-xxxlarge: 4rem;
+  --font-size-404: 10rem;
 
   --font-size-button: var(--font-size-large);
   --font-size-form-label: var(--font-size-xlarge);
   --font-size-nav: var(--font-size-xlarge);
 
-  --font-letter-spacing-subtle: .06rem;
-
   --paragraph-spacing: 1.3rem;
+
+
+
+  --gutter-xxsmall: 0.5rem;
+  --gutter-xsmall: 1rem;
+  --gutter-small: 1.5rem;
+  --gutter-tight: 2rem;
+  --gutter-regular: 3rem;
+  --gutter-large: 4rem;
+  --gutter-xlarge: 6rem;
+  --gutter-xlarge8: 8rem;
+  --gutter-xxlarge: 12rem;
+
 
   --gutter: #{rem(24px)};
   --gutter-row: #{rem(24px)};
@@ -73,15 +71,19 @@
 
 @include grid-media(tablet) {
   :root {
-    --line-height-tight: 1.24;
+    --line-height-tight: 3rem;
     --line-height-slight: 1.45;
 
-    --font-size-level-jumbo: var(--font-size-xxxxxlarge);
-    --font-size-level-1: var(--font-size-xxxxxlarge);
-    --font-size-level-2: var(--font-size-xxxxlarge);
-    --font-size-body: var(--font-size-xlarge);
-    --font-size-body-large: var(--font-size-xxlarge);
-    --font-size-body-huge: var(--font-size-xxxlarge);
+    --font-size-xsmall: 1.5rem;
+    --font-size-small: 2.5rem;
+    --font-size-normal: 2rem;
+    --font-size-large: 3rem;
+    --font-size-xlarge: 3rem;
+    --font-size-xxlarge: 3.2rem;
+    --font-size-xxxlarge: 4rem;
+    --font-size-404: 10rem;
+  
+
 
     --page-margin: #{rem(64px)};
   }
@@ -100,12 +102,6 @@
   }
 }
 
-@include grid-media(largedesktop) {
-  :root {
-    --font-size-root: 20px;
-    --page-margin: #{rem(128px)};
-  }
-}
 
 
 //Base

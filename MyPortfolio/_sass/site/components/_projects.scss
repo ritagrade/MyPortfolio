@@ -6,15 +6,15 @@
 .projects {
   display: grid;
   grid-template-columns: 1fr;
-  grid-row-gap: 6rem;
-  padding: 3rem;
-  padding-bottom: 12rem;
+  grid-row-gap: var(--gutter-regular);
+  padding: var(--gutter-small);
+  padding-bottom: var(--gutter-xxlarge);
   
   h4 {
     text-align: center;
-    font-family: 'Patua One', cursive;
-    font-size: 2rem;
-    margin-top: 2rem;
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-small);
+    margin-top: var(--gutter-small);
   }
 
 }
@@ -43,15 +43,15 @@
 .project-info {
   display: grid;
   grid-template-columns: 1fr;
-  grid-row-gap: 3rem;
-  margin-bottom: 3rem;
+  grid-row-gap: var(--gutter-regular);
+  margin-bottom: var(--gutter-regular);
 }
 
 .imag-project {
   display: grid;
   grid-template-columns: 1fr;
-  grid-row-gap: 3rem;
-  margin-bottom: 12rem;
+  grid-row-gap: var(--gutter-small);
+  margin-bottom: var(--gutter-xxlarge);
 }
 
 
@@ -62,12 +62,12 @@
   .projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-row-gap: 1.5rem;
-    grid-column-gap: 1.5rem;
-    padding: 3rem;
+    grid-row-gap: var(--gutter-small);
+    grid-column-gap: var(--gutter-small);
+    padding: var(--gutter-regular);
     align-items: center;
     justify-content: center;
-    margin-bottom: 12rem;
+    margin-bottom: var(--gutter-xxlarge);
   }
   
   .projects-intro-wrapper {
@@ -85,14 +85,14 @@
 
   .project-info {
     grid-template-columns: 2.5fr 1fr;
-    grid-column-gap: 6rem;
+    grid-column-gap: var(--gutter-xlarge);
   }
   
   .imag-project {
     display: flex;
     grid-template-columns: auto auto auto;
-    grid-row-gap: 3rem;
-    grid-column-gap: 3rem;
+    grid-row-gap: var(--gutter-regular);
+    grid-column-gap: var(--gutter-regular);
   }
   
 }
@@ -105,8 +105,8 @@
   .projects {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 1.5rem;
-    grid-column-gap: 1.5rem;
+    grid-row-gap: var(--gutter-small);
+    grid-column-gap: var(--gutter-small);
   }
   
   .project-listing {

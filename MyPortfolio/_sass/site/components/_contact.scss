@@ -2,18 +2,18 @@
 /*----------------------- Mobile --------------------------*/
 
 .contact {
-  padding: 3rem;
-  margin-bottom: 6rem;
+  padding: var(--gutter-small);
+  margin-bottom: var(--gutter-xlarge);
 }
   
 .col-lg-8,
 .col-lg-8 h3,
 .col-lg-4 h3 {
-  margin-bottom: 3rem;
+  margin-bottom: var(--gutter-regular);
 }
 
 .btn {
-  margin-top: 1.5rem;
+  margin-top: var(--gutter-small);
 }
 
 

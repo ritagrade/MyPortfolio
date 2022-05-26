@@ -95,7 +95,7 @@ ul {
 
 
 #icon {
-  font-size: 1rem;
+  font-size: var(--font-size-xsmall);
   color: var(--color-light);
 }
 
@@ -103,5 +103,11 @@ ul {
 
 
 
+.404 {
+  margin-top: 30vh auto;
+  text-align: center;
 
-
+  h3 {
+    font-size: var(--font-size-404);
+  }
+}

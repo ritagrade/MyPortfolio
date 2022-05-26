@@ -42,11 +42,11 @@ body {
 
 .main-content {
   min-height: calc(100vh - 268px);
-  padding-top: 1rem;
+  padding-top: var(--gutter-xsmall);
 
   @include grid-media(tablet) {
     min-height: calc(100vh - 248px);
-    padding-top: 2rem;
+    padding-top: var(--gutter-tight);
   }
   @include grid-media(desktop) {
     min-height: calc(100vh - 254px);
@@ -54,5 +54,5 @@ body {
 }
 
 .page-header-spacer {
-  height: 2em;
+  height: var(--gutter-tight);
 }
