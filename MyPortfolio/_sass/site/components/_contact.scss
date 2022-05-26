@@ -11,13 +11,16 @@
 .col-lg-4 h3 {
   margin-bottom: 3rem;
 }
-  
+
+.btn {
+  margin-top: 1.5rem;
+}
 
 
 /*----------------------- Min 768px --------------------------*/
 
 
-@media screen and (min-width: 768px) {
+@include grid-media(tablet) {
 
   .contactrow {
     display: grid;

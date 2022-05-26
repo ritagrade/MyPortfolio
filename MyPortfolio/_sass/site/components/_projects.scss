@@ -57,7 +57,7 @@
 
 /*----------------------- Min 768px --------------------------*/
 
-@media screen and (min-width: 768px) {
+@include grid-media(tablet) {
 
   .projects {
     display: grid;
@@ -100,7 +100,7 @@
 
 /*----------------------- Min 1440px --------------------------*/
 
-@media screen and (min-width: 1440px) {
+@include grid-media(desktop) {
   
   .projects {
     display: grid;

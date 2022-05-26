@@ -64,7 +64,7 @@ form {
   #{$all-text-inputs-focus},
   #{$all-text-inputs-active} {
     border: 0;
-    border-bottom: 0.3rem solid #e73c7e ;
+    border-bottom: 0.3rem solid var(--color-action) ;
     transition: border-bottom-color $timing-interaction;
   }
 

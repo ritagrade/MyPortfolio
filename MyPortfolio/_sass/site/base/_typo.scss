@@ -1,60 +1,28 @@
+h1 {
+  font-family: 'Patua One', cursive;
+  font-size: 3.2rem;
+}
 
+h2 {
+  font-family: 'Patua One', cursive;
+  font-size: 24px;
+  font-size: 2.4rem;
+}
 
 h3 {
   font-family: 'Patua One', cursive;
   font-size: 2rem;
-  background: linear-gradient(-95deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: var(--color-gradient);
   background-size: 400% 400%;
   animation: gradient 30s ease infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-  
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-  
-.brand {
-  font-family: 'Patua One', cursive;
-  font-size: 24px;
-  font-size: 2.4rem;
-}
-  
-  
-.h1 {
-  font-family: 'Patua One', cursive;
-  font-size: 32px;
-  font-size: 3.2rem;
-}
 
-.h2 {
+  
+h4 {
   font-family: 'Patua One', cursive;
-  font-size: 24px;
-  font-size: 2.4rem;
-}
-
-.h3 {
-  font-family: 'Patua One', cursive;
-  font-size: 20px;
-  font-size: 2rem;
-}
-
-.small {
-  font-family: 'Lato', sans-serif;
-  font-size: 14px;
-  font-size: 1.4rem;
-}
-
-span {
-  opacity: 0.0;
+  font-size: 1.5rem;
 }
 
 p, label, span {
@@ -63,18 +31,37 @@ p, label, span {
   line-height: 3rem;
 }
 
+span {
+  opacity: 0.0;
+}
+
 figcaption {
   font-family: 'Lato', sans-serif;
   font-size: 1rem; 
-
 }
+
+
+.brand {
+  font-family: 'Patua One', cursive;
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+  
+  
+
+
+.small {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
 
 #nav-nav a {
   font-family: 'Lato', sans-serif;
   font-size: 2rem; 
   line-height: 3rem;
 }
-
 
 .logo {
   font-family: 'Patua One', cursive;

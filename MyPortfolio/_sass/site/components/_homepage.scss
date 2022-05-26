@@ -1,8 +1,6 @@
 
 /*----------------------- Mobile --------------------------*/
 
-
-
 .hero {
     padding-bottom: 8rem;
 }
@@ -11,24 +9,12 @@
   position: relative;
   padding: var(--gutter);
   height: 50vh;
-  background: linear-gradient(-95deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 30s ease infinite;
+  background: var(--color-gradient);
+  background-size: 400% 400%;
+  animation: gradient 30s ease infinite;
 }
   
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-  
-.h2 {
+.headline {
   margin: auto;
   position: absolute;
   top: 50%;
@@ -39,7 +25,11 @@
 .sectionportfolio #icon {
   padding: 0.5em;
   font-size: 4rem;
-  opacity: 0.2;
+  background: var(--color-gradient);
+  background-size: 400% 400%;
+  animation: gradient 30s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
   
 .portfoliotitle {
@@ -47,7 +37,6 @@
   justify-content: space-between;
   align-items: center;
 }
-  
   
 .sectionportfolio {
   display: grid;
@@ -108,7 +97,7 @@
 
 /*----------------------- Min 768px --------------------------*/
 
-@media screen and (min-width: 768px) {
+@include grid-media(tablet) {
 
   .hs {
       grid-auto-columns: calc(50% - var(--gutter) * 1);
@@ -127,7 +116,7 @@
 
 /*----------------------- Min 1440px --------------------------*/
 
-@media screen and (min-width: 1440px) {
+@include grid-media(desktop) {
 
   .hs {
       grid-auto-columns: calc(30% - var(--gutter) * 1);
