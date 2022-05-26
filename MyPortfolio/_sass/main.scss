@@ -1,0 +1,984 @@
+/*----------------------- The Root --------------------------*/
+
+/* Defining light mode and dark mode colors in CSS variables. */
+
+:root {
+  --bg-color-light: #FFFFFF;
+  --color-light: #000000;
+  --bg-color-dark: #000000;
+  --color-dark: #FFFFFF;
+}
+
+:root {
+  background-color: var(--bg-color-light);
+  color: var(--color-light);
+  font-family: 'Lato', sans-serif;
+  /* I'm using `rem` for font sizes, with `px` sizes noted for each in case a browser doesn't render `em`. (If there are duplicate styles, CSS will apply the style furthest down - closest to the bottom of - the cascading style sheet.)*/
+  font-size: 62.5%;
+}
+
+/*----------------------- The Body --------------------------*/
+
+/* The body is the container for the CSS grid. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  // grid-template-columns: repeat(12, 1fr);
+  // grid-template-rows: auto 1fr;
+  // grid-column-gap: 1em;
+  // grid-row-gap: 1em;
+  // font-size: 2rem;
+  // line-height: 1.5;
+
+  // display:flex; 
+  // flex-direction:column; 
+  list-style: none;
+}
+
+
+/*----------------------- CSS for HTML elements --------------------------*/
+
+/* I prefer using html elements as the containers inside of the grid, rather than a bunch of divs with classes, as the html elements are more descriptive without classes or ids. */
+
+// header {
+//   position: sticky;
+//   top: 0;
+// }
+
+//  nav {
+//    grid-column: 6 / 12;
+//    grid-row: 1;
+//  }
+
+// #nav-nav {
+//   grid-row: 1;
+//   display: inline;
+// }
+
+// #nav-breadcrumb {
+//   grid-row: 2;
+// }
+
+// main {
+//   grid-column: 1 / 12;
+//   grid-row: 2;
+
+//   grid-template-rows: auto;
+//   grid-row-gap: 16px;
+//   grid-row-gap: 1em;
+// }
+
+// Navegação
+
+
+.header{
+  position: sticky;
+  z-index: 9;
+  top: 0;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 30s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.menu {
+  display: grid;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.navheader {
+  grid-row: 2;
+}
+
+.current {
+  justify-content: center;
+}
+
+.logo {
+  grid-row: 1;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+#nav-nav a {
+  padding: 1rem;
+}
+
+
+
+// Portfolio
+
+#portfoliowrap {
+	padding-top: 60px;
+	margin-bottom: 60px;
+	display: block;
+	text-align: center;
+}
+
+
+.portfolio {
+	padding:0 !important;
+	margin:0 !important;
+	display:block;
+}
+
+
+.portfolio-item .title:before {border-radius:0; display:none}
+.portfolio-item p {margin:0px 0 30px;}
+.portfolio-item h3 {margin:-10px 0 10px; font-size:16px; text-transform:uppercase;}
+
+
+.tpl6 h3 {
+	color:#fff;
+	margin:0;
+	padding:40px 5px 0;
+	font-size:16px;
+	text-transform:uppercase;
+}
+.tpl6 .dmbutton {
+	display:inline-block;
+	margin:30px 5px 20px 5px;
+	font-size:13px;
+}
+
+.tpl6 .bg {
+	height:100%;
+	width:100%;
+
+	text-align:center;
+}
+
+
+
+article {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 8fr 4fr;
+  align-items: center;
+}
+
+#article-excerpt-title {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+#article-title {
+  grid-row: 1;
+  grid-column: 1 / 3;
+}
+
+#article-date {
+  grid-row: 1;
+  grid-column: 2;
+  text-align: right;
+}
+
+#article-content {
+  grid-row: 3;
+  grid-column: 1 / 3;
+}
+
+#article-summary {
+  grid-row: 3;
+  grid-column: 1 / 3;
+}
+
+/* I'm not satisfied with the 'article-image' solution below, but it get's me close for now. */
+
+#article-image {
+  grid-row: 4;
+  width: 25rem;
+  height: 25rem;
+}
+
+#article-tags {
+  grid-row: 2;
+  grid-column: 1 / 3;
+}
+
+footer {
+  // grid-template-areas: 1fr 3fr;
+  // grid-column: 1 / 12;
+  // grid-row: 3;
+  // justify-content: space-between;
+  // bottom: 0;
+  // position: sticky;
+  // padding: 3rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--bg-color-dark);
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+}
+
+footer p {
+ display: none;
+}
+
+#social {
+  padding: 1rem;
+}
+
+#copyright {
+  grid-row: 2;
+}
+
+footer #icon {
+  padding: 0.5em;
+  font-size: 3rem;
+}
+
+// Projects
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 6rem;
+  padding: 3rem;
+  padding-bottom: 12rem;
+}
+
+.project-listing {
+  display: block;
+}
+
+.thumbnail-description {
+  display: none;
+}
+
+.projects-intro-wrapper {
+  grid-row: 3;
+
+    h3{
+      text-align: center;
+    }
+}
+
+.projects h4 {
+  text-align: center;
+  font-family: 'Patua One', cursive;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.keep-line-wrap {
+  opacity: 1;
+}
+
+.project-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.imag-project {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 3rem;
+  margin-bottom: 12rem;
+}
+
+// Project
+
+.project-wrapper {
+  padding: 3rem;
+}
+
+.project-title {
+  margin-bottom: 3rem;
+}
+
+// homepage
+
+
+.hero {
+  padding-bottom: 8rem;
+}
+
+.tagline {
+  position: relative;
+  padding: var(--gutter);
+  height: 50vh;
+  background: linear-gradient(-95deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 30s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.h2 {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.sectionportfolio #icon {
+  padding: 0.5em;
+  font-size: 4rem;
+  opacity: 0.2;
+}
+
+.portfoliotitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.sectionportfolio {
+  // position: sticky;
+  // top: 0;
+  display: grid;
+  // grid-template-columns: 1fr 1fr;
+  // grid-template-rows: 2fr;
+  // height: 100vh;
+  padding: var(--gutter) 0;
+  grid-gap: var(--gutter) / 2;
+  grid-template-columns: var(--gutter) 1fr var(--gutter);
+  align-content: start;
+}
+
+.sectionportfolio > * {
+  grid-column: 2 / -2;
+}
+
+.sectionportfolio > .full {
+  grid-column: 1 / -1;
+}
+
+.hs {
+  display: grid;
+  grid-gap: calc(var(--gutter) / 2);
+  grid-template-columns: 10px;
+  grid-template-rows: minmax(150px, 1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: calc(80% - var(--gutter) * 1);
+
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  padding-bottom: calc(.75 * var(--gutter));
+  margin-bottom: calc(-.25 * var(--gutter));
+}
+
+.hs:before,
+.hs:after {
+  content: '';
+  width: 10px;
+}
+
+.hs > li {
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+
+// contact
+
+.contact {
+  padding: 3rem;
+  margin-bottom: 6rem;
+}
+
+.col-lg-8,
+.col-lg-8 h3,
+.col-lg-4 h3 {
+margin-bottom: 3rem;
+}
+
+
+// About
+
+.about-wrapper {
+
+  .about {
+    display: grid;
+    padding: 3rem;
+    margin-bottom: 6rem;
+
+    .about-intro-image {
+      margin-bottom: 3rem;
+      grid-row: 1;
+      grid-column: 1, 3;
+    }
+
+    .about-intro-description {
+      margin-bottom: 3rem;
+      grid-row: 2;
+    }
+
+    .about-intro-description p {
+      margin-bottom: 3rem;
+    }
+
+    .about-intro-description p:first-child {
+      font-family: 'Patua One', cursive;
+      font-size: 3rem;
+      background: linear-gradient(-95deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 30s ease infinite;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .about-attributes {
+      grid-row: 3;
+    
+    .about-site {
+      grid-row: 4;
+    }
+
+    .type-level-2 {
+      margin-top: 3rem;
+    }
+    
+    dt p {
+      font-size: 2rem;
+      margin-top: 3rem;
+    }
+
+    .list--dashed li {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.5rem;
+      line-height: 3rem;
+    }
+
+    .list--dashed {
+      margin-top: 3rem;
+    }
+    }
+  }
+}
+
+.about-wrapper {
+  .about {
+    .about-section {
+      border-top: 1px solid var(--color-line);
+      margin-bottom: var(--gutter-row);
+      padding-top: rem(8px);
+    }
+
+    .about-section-title {
+      padding-bottom: rem(8px);
+      margin-bottom: .5rem;
+    }
+  }
+}
+
+
+
+/*----------------------- Responsive Images --------------------------*/
+
+/* Images embedded in markdown posts directly - such as ![img](path) - were not being scaled in anyway.
+With the tag `img` I can control all images across the site.
+In this case, setting image widths to 100% not only keeps them within the viewport across screen sizes, but within the parent css grid container(s) as applicable.  */
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* I still had a problem with screenshots being too tall. */
+
+#article-image img {
+  width: auto;
+  max-height: 100%;
+  /*max-width: 100%;*/
+}
+
+/*----------------------- Typography classes --------------------------*/
+
+/* I use classes to apply styles across elements.  This way, html elements can be used to arrange content across the CSS grid and I can control styling separately. */
+
+
+h3 {
+  font-family: 'Patua One', cursive;
+  font-size: 2rem;
+  background: linear-gradient(-95deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 30s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+
+.brand {
+  font-family: 'Patua One', cursive;
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+
+.h1 {
+  font-family: 'Patua One', cursive;
+  font-size: 32px;
+  font-size: 3.2rem;
+}
+
+.h2 {
+  font-family: 'Patua One', cursive;
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+.h3 {
+  font-family: 'Patua One', cursive;
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+.small {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+span {
+  opacity: 0.0;
+}
+
+p, label, span {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem; 
+  line-height: 3rem;
+}
+
+figcaption {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem; 
+
+}
+
+#nav-nav a {
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem; 
+  line-height: 3rem;
+}
+
+
+.logo {
+  font-family: 'Patua One', cursive;
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+/*----------------------- Customizing Links --------------------------*/
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: var(--color-light);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--color-light);
+}
+
+a:active {
+  background-image: linear-gradient(0deg,rgba(244,208,111,0.5) 50%,transparent 50%);
+}
+
+.current {
+  background-image: linear-gradient(0deg,rgba(244,208,111,0.5) 50%,transparent 50%);
+}
+
+main a:link {
+  text-decoration: none;
+}
+
+.tagline a:link {
+  text-decoration: none;
+}
+
+main a:hover {
+  text-decoration: none;
+}
+
+.tagline a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+/*----------------------- Font awesome icons --------------------------*/
+
+.fa-strava {
+  color: #fc4c02;
+}
+
+.fa-linkedin {
+  color: #0077b5;
+}
+
+.fa-medium {
+  color: #12100e;
+}
+
+.fa-twitter {
+  color: #1da1f2;
+}
+
+.fa-github {
+  color: #24292e;
+}
+
+.fa-behance {
+  color: #1769ff;
+}
+
+.fa-dribbble {
+  color: #ea4c89;
+}
+
+/* Making all icons black. */
+
+#icon {
+  font-size: 1rem;
+  color: var(--color-light);
+}
+
+/*----------------------- Responsive typography via media queries. --------------------------*/
+
+/* I'm designing and coding with a mobile-first approach, which means the baseline styles are for mobile.  (i.e. I scale up for desktop rather than scale down for mobile.)  I wanted to scale certain text a bit larger.  For example, on the desktop, I wanted the body text to be 2x larger than on mobile, but I wanted the tagline to be 3x as large.  Because I'm using em font sizes, changing the body font-size will change font sizes everywhere.  Additional font size changes like "h1" and "icon" below are to scale text differently than the body.*/
+
+/* I'm still having issues with *some* high resolution (high pixel density) mobile displays. */
+
+@media screen and (min-width: 768px) {
+  :root {
+    font-size: 0.85rem;
+  }
+
+  .menu {
+    display: grid;
+    justify-content: space-between;
+  }
+
+  .navheader {
+    grid-row: 1;
+    justify-content: center;
+  }
+  
+  .navheader a {
+    justify-content: center;
+  }
+  
+  #nav-nav {
+    justify-content: center;
+  }
+  
+  .logo {
+    justify-content: center;
+    grid-column: 1;
+    padding-bottom: 0;
+  }
+
+  body {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 3rem;
+  }
+
+  main {
+    grid-column: 2 / 11;
+  }
+
+  .tagline {
+    grid-column: 2 / 12;
+  }
+  footer #icon {
+    display: none;
+  }
+  footer p {
+    display: block;
+  }
+
+  .hs {
+    grid-auto-columns: calc(50% - var(--gutter) * 1);
+  }
+
+
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 1.5rem;
+    padding: 3rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12rem;
+  }
+  
+  .projects-intro-wrapper {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+
+  .project-listing {
+    display: block;
+  }
+  
+  .thumbnail-description, .projects h4 {
+    display: none;
+  }
+
+  .about-wrapper {
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 3rem 1fr;
+      padding: 3rem;
+      margin-bottom: 6rem;
+  
+      .about-intro-image {
+        margin-bottom: 0;
+        grid-row: 1;
+        grid-column: 3;
+      }
+  
+      .about-intro-description {
+        margin-top: 40vh;
+        margin-bottom: 0;
+        grid-row: 1;
+        grid-column: 1;
+      }
+      
+      .about-experience {
+        grid-column: 3;
+        grid-row: 2;
+      }
+
+      .about-education {
+        margin-top: 40vh;
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      .about-skills {
+        grid-column: 3;
+        grid-row: 3;
+      }
+
+      .about-tools {
+        margin-top: 40vh;
+        grid-column: 1;
+        grid-row: 3;
+      }
+
+      .about-tools, .about-education {
+        text-align: right;
+      }
+    }
+  }
+
+  .contactrow {
+    display: grid;
+    grid-template-columns: 3fr 0.2fr 1fr;
+  }
+  
+  .col-lg-8 {
+    grid-column: 1;
+  }
+  
+  .col-lg-4 {
+    grid-column: 3;
+  }
+
+  // Projects
+
+.project-info {
+  grid-template-columns: 2.5fr 1fr;
+  grid-column-gap: 6rem;
+}
+
+.imag-project {
+  display: flex;
+  grid-template-columns: auto auto auto;
+  grid-row-gap: 3rem;
+  grid-column-gap: 3rem;
+}
+
+
+}
+
+
+
+@media screen and (min-width: 1440px) {
+  :root {
+    font-size: .85rem;
+  }
+  .tagline {
+    font-size: 3rem;
+  }
+  header, main {
+    grid-column: 2 / 9;
+  }
+  footer {
+    grid-column: 2 / 12;
+  }
+
+  .tagline {
+    height: 70vh;
+  }
+
+  .tagline h2 {
+    font-size: 4rem;
+    padding: 0rem 6rem;
+  }
+
+  .hs {
+    grid-auto-columns: calc(30% - var(--gutter) * 1);
+  }
+
+  nav {
+    grid-column: 3 / 12;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 1.5rem;
+  }
+  
+  .project-listing {
+    display: block;
+  }
+  
+  .thumbnail-description, .projects h4 {
+    display: none;
+  }
+
+  .projects-intro-wrapper {
+    grid-row: 2;
+    grid-column: 2;
+    text-align: center;
+  }
+  
+
+}
+
+/*----------------------- Dark Mode via media queries. --------------------------*/
+
+/* Now adding a simple dark mode (with no toggle) via media query. */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: var(--bg-color-dark);
+    color: var(--color-dark);
+  }
+  a:link {
+    color: var(--color-dark);
+  }
+  a:visited {
+    color: var(--color-dark);
+  }
+  #icon {
+    color: var(--color-dark)
+  }
+  
+  /* I found a complementary blue high color through coolors.co to my yellow highlight color in light mode. */
+  /* I eye-balled the color via VS Code color picker to make it a bit lighter. */
+  
+  a:active {
+    background-image: linear-gradient(0deg,rgba(111, 173, 227, 0.5) 50%,transparent 50%);
+  }
+  .current {
+    background-image: linear-gradient(0deg,rgba(111, 173, 227, 0.5) 50%,transparent 50%);
+  }
+}
+
+
