@@ -1,0 +1,82 @@
+
+/*----------------------- Mobile --------------------------*/
+
+.header{
+    position: sticky;
+    z-index: 9;
+    top: 0;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 30s ease infinite;
+}
+  
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+  
+
+.menu {
+    display: grid;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.navheader {
+    grid-row: 2;
+}
+
+.current {
+    justify-content: center;
+}
+
+.logo {
+    grid-row: 1;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+#nav-nav a {
+    padding: 1rem;
+}
+
+
+/*----------------------- Min 768px --------------------------*/
+
+@media screen and (min-width: 768px) {
+
+    .menu {
+        display: grid;
+        justify-content: space-between;
+    }
+
+    .navheader {
+        grid-row: 1;
+        justify-content: center;
+    }
+        
+    .navheader a {
+        justify-content: center;
+    }
+        
+    #nav-nav {
+        justify-content: center;
+    }
+        
+    .logo {
+        justify-content: center;
+        grid-column: 1;
+        padding-bottom: 0;
+    }
+
+}
+
+
+/*----------------------- Min 1440px --------------------------*/

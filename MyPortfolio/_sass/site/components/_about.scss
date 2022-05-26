@@ -1,0 +1,149 @@
+
+/*----------------------- Mobile --------------------------*/
+
+
+.about-wrapper {
+
+  .about {
+    display: grid;
+    padding: 3rem;
+    margin-bottom: 6rem;
+
+    .about-intro-image {
+      margin-bottom: 3rem;
+      grid-row: 1;
+      grid-column: 1, 3;
+    }
+  
+    .about-intro-description {
+      margin-bottom: 3rem;
+      grid-row: 2;
+    }
+  
+    .about-intro-description p {
+      margin-bottom: 3rem;
+    }
+  
+    .about-intro-description p:first-child {
+      font-family: 'Patua One', cursive;
+      font-size: 3rem;
+      background: linear-gradient(-95deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 30s ease infinite;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  
+    .about-attributes {
+      grid-row: 3;
+    
+      .about-site {
+        grid-row: 4;
+      }
+
+      .type-level-2 {
+        margin-top: 3rem;
+      }
+      
+      dt p {
+        font-size: 2rem;
+        margin-top: 3rem;
+      }
+
+      .list--dashed li {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.5rem;
+        line-height: 3rem;
+      }
+
+      .list--dashed {
+        margin-top: 3rem;
+      }
+    }
+  }
+}
+  
+.about-wrapper {
+  .about {
+    .about-section {
+      border-top: 1px solid var(--color-line);
+      margin-bottom: var(--gutter-row);
+      padding-top: rem(8px);
+    }
+
+    .about-section-title {
+      padding-bottom: rem(8px);
+      margin-bottom: .5rem;
+    }
+  }
+}
+  
+
+
+/*----------------------- Min 768px --------------------------*/
+
+@media screen and (min-width: 768px) {
+
+  .about-wrapper {
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 3rem 1fr;
+      padding: 3rem;
+      margin-bottom: 6rem;
+  
+      .about-intro-image {
+        margin-bottom: 0;
+        grid-row: 1;
+        grid-column: 3;
+      }
+  
+      .about-intro-description {
+        margin-top: 40vh;
+        margin-bottom: 0;
+        grid-row: 1;
+        grid-column: 1;
+      }
+      
+      .about-experience {
+        grid-column: 3;
+        grid-row: 2;
+      }
+
+      .about-education {
+        margin-top: 40vh;
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      .about-skills {
+        grid-column: 3;
+        grid-row: 3;
+      }
+
+      .about-tools {
+        margin-top: 40vh;
+        grid-column: 1;
+        grid-row: 3;
+      }
+
+      .about-tools, .about-education {
+        text-align: right;
+      }
+    }
+  }
+}
+
+/*----------------------- Min 1440px --------------------------*/
